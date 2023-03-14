@@ -9,11 +9,11 @@ Discussion: https://discord.gg/RvFM97v
 
 ## Features
 
-* Easily render QR code images
-* Optionally embed a logotype
+- Easily render QR code images
+- Optionally embed a logotype
 
-| Android | iOS |
-| - | - |
+| Android                                                                                                                      | iOS                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | <img src="https://raw.githubusercontent.com/awesomejerry/react-native-qrcode-svg/master/screenshot/android.png" width="240"> | <img src="https://raw.githubusercontent.com/awesomejerry/react-native-qrcode-svg/master/screenshot/ios.png" width="240"> |
 
 ## Installation
@@ -23,12 +23,14 @@ Install dependency packages
 ```bash
 yarn add react-native-svg react-native-qrcode-svg
 ```
+
 Or
+
 ```bash
 npm i -S react-native-svg react-native-qrcode-svg
 ```
 
-If you are using `React Native 0.60.+` go to the folder **your-project/ios** and run `pod install`, and you're done. 
+If you are using `React Native 0.60.+` go to the folder **your-project/ios** and run `pod install`, and you're done.
 
 If not, use one of the following method to link.
 
@@ -105,28 +107,29 @@ render() {
 
 ## Props
 
-Name            | Default    | Description
-----------------|------------|--------------
-size            | 100        | Size of rendered image in pixels
-value           | 'this is a QR code' | String Value of the QR code. Can also accept an array of segments as defined in [Manual mode](https://github.com/soldair/node-qrcode#manual-mode). Ex. [{ data: 'ABCDEFG', mode: 'alphanumeric' }, { data: '0123456', mode: 'numeric' }, { data: [253,254,255], mode: 'byte' }]
-color           | 'black'        | Color of the QR code
-backgroundColor | 'white'        | Color of the background
-enableLinearGradient | false     | enables or disables linear gradient
-linearGradient  |  ['rgb(255,0,0)','rgb(0,255,255)']  | array of 2 rgb colors used to create the linear gradient
-gradientDirection| [170,0,0,0]  | the direction of the linear gradient
-logo | null        | Image source object. Ex. {uri: 'base64string'} or {require('pathToImage')}
-logoSize | 20% of size | Size of the imprinted logo. Bigger logo = less error correction in QR code
-logoBackgroundColor | backgroundColor        | The logo gets a filled quadratic background with this color. Use 'transparent' if your logo already has its own backdrop.
-logoMargin | 2 | logo's distance to its wrapper
-logoBorderRadius | 0 | the border-radius of logo image (Android is not supported)
-quietZone | 0 | quiet zone around the qr in pixels (useful when saving image to gallery)
-getRef          | null       | Get SVG ref for further usage
-ecl             | 'M'        | Error correction level
-onError(error)  | undefined  | Callback fired when exception happened during the code generating process
-
+| Name                 | Default                           | Description                                                                                                                                                                                                                                                                     |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| size                 | 100                               | Size of rendered image in pixels                                                                                                                                                                                                                                                |
+| value                | 'this is a QR code'               | String Value of the QR code. Can also accept an array of segments as defined in [Manual mode](https://github.com/soldair/node-qrcode#manual-mode). Ex. [{ data: 'ABCDEFG', mode: 'alphanumeric' }, { data: '0123456', mode: 'numeric' }, { data: [253,254,255], mode: 'byte' }] |
+| color                | 'black'                           | Color of the QR code                                                                                                                                                                                                                                                            |
+| backgroundColor      | 'white'                           | Color of the background                                                                                                                                                                                                                                                         |
+| enableLinearGradient | false                             | enables or disables linear gradient                                                                                                                                                                                                                                             |
+| linearGradient       | ['rgb(255,0,0)','rgb(0,255,255)'] | array of 2 rgb colors used to create the linear gradient                                                                                                                                                                                                                        |
+| gradientDirection    | [170,0,0,0]                       | the direction of the linear gradient                                                                                                                                                                                                                                            |
+| logo                 | null                              | Image source object. Ex. {uri: 'base64string'} or {require('pathToImage')}                                                                                                                                                                                                      |
+| logoSize             | 20% of size                       | Size of the imprinted logo. Bigger logo = less error correction in QR code                                                                                                                                                                                                      |
+| logoBackgroundColor  | backgroundColor                   | The logo gets a filled quadratic background with this color. Use 'transparent' if your logo already has its own backdrop.                                                                                                                                                       |
+| logoMargin           | 2                                 | logo's distance to its wrapper                                                                                                                                                                                                                                                  |
+| logoBorderRadius     | 0                                 | the border-radius of logo image (Android is not supported)                                                                                                                                                                                                                      |
+| quietZone            | 0                                 | quiet zone around the qr in pixels (useful when saving image to gallery)                                                                                                                                                                                                        |
+| getRef               | null                              | Get SVG ref for further usage                                                                                                                                                                                                                                                   |
+| ecl                  | 'M'                               | Error correction level                                                                                                                                                                                                                                                          |
+| onError(error)       | undefined                         | Callback fired when exception happened during the code generating process                                                                                                                                                                                                       |
+| shouldBeResponsible  | false                             | If true, the QRCode will fit parent's width and height                                                                                                                                                                                                                          |
 
 ## Saving generated code to gallery
- _Note: Experimental only ( not tested on iOS) , uses getRef() and needs [RNFS module](https://github.com/itinance/react-native-fs)_
+
+_Note: Experimental only ( not tested on iOS) , uses getRef() and needs [RNFS module](https://github.com/itinance/react-native-fs)_
 
 npm install --save react-native-fs
 
@@ -151,16 +154,15 @@ import RNFS from "react-native-fs"
   }
 ```
 
-
 ## Dependencies
 
 ### PeerDependencies
 
-* [react-native-svg](https://github.com/magicismight/react-native-svg)
+- [react-native-svg](https://github.com/magicismight/react-native-svg)
 
 ### Dependencies
 
-* [node-qrcode](https://github.com/soldair/node-qrcode)
+- [node-qrcode](https://github.com/soldair/node-qrcode)
 
 ---
 

@@ -83,6 +83,7 @@ const QRCode = ({
   ecl = "M",
   getRef,
   onError,
+  shouldBeResponsible = false,
 }) => {
   const result = useMemo(() => {
     try {
@@ -112,8 +113,8 @@ const QRCode = ({
         size + quietZone * 2,
         size + quietZone * 2,
       ].join(" ")}
-      width="100%"
-      height="100%"
+      width={shouldBeResponsible ? "100%" : size}
+      height={shouldBeResponsible ? "100%" : size}
     >
       <Defs>
         <LinearGradient
