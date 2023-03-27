@@ -37,6 +37,8 @@ export interface QRCodeProps {
   ecl?: "L" | "M" | "Q" | "H";
   /* error handler called when matrix fails to generate */
   onError?: Function;
+  /* has the size of the parent's view */
+  shouldBeResponsible?: boolean;
 }
 
 export default QRCode;
